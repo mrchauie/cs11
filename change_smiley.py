@@ -13,8 +13,6 @@ a = np.asarray(im)
 
 width = len(a)
 height = len(a[0])
-print(f'width:{width} height:{height}')
-
 
 for w in range(width):
     for h in range(height):
