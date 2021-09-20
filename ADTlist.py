@@ -11,6 +11,28 @@ class List:
     """
     def __init__(self):
         self.head = None
+    
+    def __len__(self):
+        """Checks the length of the queue
+        """
+        current_element = self.head
+        length = 0
+        while current_element != None:
+            length = length + 1
+            current_element = current_element.next
+        return length
+
+    def getList(self):
+        ''' Outputs all data in the list on the screen
+        '''
+        if self.head == None:
+            print('List is empty')
+        else:
+            current_element = self.head
+            for i in range(self.__len__()):
+                print(current_element.data)
+                next_element = current_element.next
+                current_element = next_element
 
     def append(self, data):
         """Add items to the end of the Queue
@@ -27,7 +49,7 @@ class List:
             current_element.next = new_element
 
     def popleft(self):
-        """Remove first item from the Queue
+        """Remove first item from the List
         """
         if self.head != None:
             first_element = self.head
@@ -50,16 +72,6 @@ class List:
                 current_element = next_element
             prev_elem.next = None
 
-    def __len__(self):
-        """Checks the length of the queue
-        """
-        current_element = self.head
-        length = 0
-        while current_element != None:
-            length = length + 1
-            current_element = current_element.next
-        return length
-
     def insert(self, index, data):
         """Adds an element at a partifuclar index of the queue
         """
@@ -80,19 +92,6 @@ class List:
             index_elem = current_element
             prev_elem.next = new_elem
             new_elem.next = index_elem
-
-
-    def getList(self):
-        ''' Outputs all data in the list on the screen
-        '''
-        if self.head == None:
-            print('List is empty')
-        else:
-            current_element = self.head
-            for i in range(self.__len__()):
-                print(current_element.data)
-                next_element = current_element.next
-                current_element = next_element
 
     def delete(self, index):
         '''Deletes an element at a particular index
@@ -121,19 +120,9 @@ class List:
             prev_elem.next = current_element.next
             current_element.next = None
 
-
-
-#test...
-q = List()
-q.append(0)
-q.append(1)
-q.append(2)
-q.append(3)
-q.append(4)
-q.delete(0)
-q.getList()
-q.popright()
-q.getList()
-
-
-
+# create a new list
+l = List()
+# appends a element at the front of the list
+l.append(5)
+# prints out the list
+l.getList()

@@ -6,5 +6,5 @@ def tower_of_hanoi(numbers, start, auxiliary, end):
     print('Move disk {} from rod {} to rod {}'.format(numbers, start, end))  
     tower_of_hanoi(numbers - 1, auxiliary, start, end)  
    
-numbers = 3
+numbers = 10
 tower_of_hanoi(numbers, 'A', 'B', 'C')
