@@ -62,14 +62,19 @@ class Node:
 
 
 #test
+root = Node('rest')
+root.insert('pleasant')
+root.insert('snotty')
+root.insert('apologize')
+root.insert('available')
+root.insert('trite')
+root.insert('attempt')
+root.insert('shock')
+root.insert('crack')
+root.insert('likeable')
+root.insert('colourful')
+root.insert('war')
 
-root = Node(27)
-root.insert(14)
-root.insert(35)
-root.insert(10)
-root.insert(19)
-root.insert(31)
-root.insert(42)
-print(root.inorderTraversal(root))
-print(root.preorderTraversal(root))
+# print(root.inorderTraversal(root))
+#print(root.preorderTraversal(root))
 print(root.postorderTraversal(root))
