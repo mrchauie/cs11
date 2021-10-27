@@ -3,7 +3,10 @@ import requests
 
 def generate_grades():
     '''
-    Generates an array of 2000 student numbers (ordered starting at 10001) and a random grade for the student
+    Generates a 2D array of 2000 student numbers 
+    (ordered starting at 10000) 
+    and a random grade for the student.
+    Returns the 2D array of student numbers and grades.
     '''
     grades = []
     for i in range(10000, 12000):
@@ -12,7 +15,10 @@ def generate_grades():
 
 def generate_personal():
     '''
-    Generates an array of 2000 student numbers (ordered starting at 10001) and a random name for the student
+    Generates a 2D array of 2000 student numbers 
+    (ordered starting at 10000) 
+    and a random name for the student.
+    Returns the 2D array of student numbers and name.
     '''
     api_url = "https://api.namefake.com/english-canada/random/"
     personal = []
