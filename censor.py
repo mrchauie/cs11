@@ -3,4 +3,4 @@ paragraph = 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi soll
 paragraph = paragraph.split(' ')
 for word in paragraph:
     if len(word) == 4:
-        do something
+        #do something
