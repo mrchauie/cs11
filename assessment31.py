@@ -22,7 +22,7 @@ def generate_personal():
     '''
     api_url = "https://api.namefake.com/english-canada/random/"
     personal = []
-    for i in range(10000, 12000):
+    for i in range(10000, 10010):
         response = requests.get(api_url)
         j = response.json()
         personal.append([i, j['name']])
