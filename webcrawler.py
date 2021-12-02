@@ -45,4 +45,4 @@ class Crawler:
                 self.visited_urls.append(url)
 
 if __name__ == '__main__':
-    Crawler(urls=['https://www.imdb.com/']).run()
+    Crawler(urls=['https://www.amazon.com/']).run()
