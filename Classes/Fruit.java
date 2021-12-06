@@ -1,6 +1,8 @@
-class Fruit {
+package Classes;
+
+public class Fruit {
     //attributes
-    String name;
+    public String name;
 
     //constructor for parent/super class
     public Fruit(String n) {
@@ -49,16 +51,3 @@ class Orange extends Fruit {
     }
 }
 
-public class Main {
-    public static final void main(String[] args) {
-        Fruit f = new Fruit("apple"); //instantiate Fruits object
-        f.wash();
-
-        Apple a = new Apple("Gala", "red"); //instantiate Apple object
-        a.wash();
-
-        Orange o = new Orange("Sunkist", "orange"); //instantiate Orange object
-        o.wash();
-        o.wash("Mike");
-    }
-}
