@@ -11,19 +11,20 @@ def part2():
     """
 
 
-    hsbc = Bank('hsbc')
+    hsbc = Bank('HSBC')
     for index in range (0,10):
-        accountname = 'account' + str(index)
+        accountname = 'Account' + str(index)
         hsbc.add_account(accountname)
         hsbc.deposit(accountname, index*10)
 
-    bisf = Bank('bisf')
+    bvsa = Bank('BVSA')
     for index in range(0,10):
-        accountname = 'account' + str(index)
-        bisf.add_account(accountname)
+        accountname = 'Account' + str(index)
         bal = hsbc.check_balance(accountname)
-        hsbc.withdraw(accountname, bal)
-        bisf.deposit(accountname,bal*2)
+        hsbc.withdraw(accountname, index*10)
+        bvsa.add_account(accountname)
+        bvsa.deposit(accountname, index*10)
+        bvsa.deposit(accountname, index*10)
 
 if __name__ == "__main__":
     part2()

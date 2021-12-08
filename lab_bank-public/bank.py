@@ -125,5 +125,25 @@ class Bank:
         print("{:30}| {}.".format("Bank " + self.name, activity))
 
 
+    def transfer(self, outAccount, inAccount, amount):
+        #check if accounts exists
+        if self.account_exists(outAccount) == False:
+            note = "Account does not exist: {}"
+            self.report(note.format(outAccount))
+            return False
+        elif self.account_exists(inAccount) == False:
+            note = "Account does not exist: {}"
+            self.report(note.format(inAccount))
+            return False
+        #check if out account has enough money
+        else:
+            if self.withdraw(outAccount, amount) == True:
+                return self.deposit(inAccount, amount)
+            else:
+                note = "Not enough money to not transfer to {}"
+                self.report(note.format(outAccount))
+                return False
+
+
 
 # ➡️ ======== 💻 DELETE THIS LINE AND WRITE YOUR TRANSFER() CODE HERE 💻 ========⬅️

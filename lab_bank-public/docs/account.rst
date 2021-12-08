@@ -1,6 +1,0 @@
-Account
-=======
-
-.. automodule:: account
-   :members:
-

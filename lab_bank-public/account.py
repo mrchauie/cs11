@@ -61,6 +61,10 @@ class Account:
             note = "Can't withdraw {}. Insufficient balance"
             self.report(note.format(amount, self.name))
             return False
+        elif amount < 0:
+            note = "Can't withdraw {}. Negative number"
+            self.report(note.format(amount, self.name))
+            return False
         else:
             self.balance -= amount
             note = "Withdrew {}. New balance is {}"
