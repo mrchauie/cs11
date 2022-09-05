@@ -25,10 +25,10 @@ class Node:
     # Print the tree
     def printTree(self):
         if self.left:
-            self.left.PrintTree()
+            self.left.printTree()
         print(self.data),
         if self.right:
-            self.right.PrintTree()
+            self.right.printTree()
 
     # Inorder traversal
     # Left -> Root -> Right
@@ -62,19 +62,13 @@ class Node:
 
 
 #test
-root = Node('rest')
-root.insert('pleasant')
-root.insert('snotty')
-root.insert('apologize')
-root.insert('available')
-root.insert('trite')
-root.insert('attempt')
-root.insert('shock')
-root.insert('crack')
-root.insert('likeable')
-root.insert('colourful')
-root.insert('war')
+root = Node('tu')
+root.insert('f')
+root.insert('r')
+root.insert('i')
+root.insert('n')
+root.insert('ta')
+root.insert('u')
 
-# print(root.inorderTraversal(root))
-#print(root.preorderTraversal(root))
-print(root.postorderTraversal(root))
+
+print(root.preorderTraversal(root))
